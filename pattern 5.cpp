@@ -1,30 +1,32 @@
-#include <stdio.h>
-int main() 
+#include<stdio.h>
+int main()
 {
-    int n=4;
-    int i,j;
-    for(i=1;i<=n;i++)
-    {
-    for(j=i;j<n;j++)
-    {
-    printf(" ");
-	}
-	for(j=1;j<=i;j++)
+	int n=4;
+	int i,j;
+	for (i=1;i<=n;i++)
 	{
-	printf("*");
+		for (j=i;j<n;j++)
+		{
+			printf(" ");
+		}
+		for (j=1;j<=i;j++)
+		{
+			printf("* ");
+		}
+		printf("\n");
 	}
-	printf("\n");
-	for(i=n-1;i>=1;i--)
+	for (i=n-1;i>=1;i--)
 	{
-	for(j=n;j>1;j--)
-	printf(" ");
+		for (j=n;j>i;j--)
+		{
+			printf(" ");
+		}
+		for (j=1;j<=i;j++)
+		{
+			printf("* ");
+		}
+		printf("\n");
 	}
-	for(j=1;j<=i;j++)
-	{
-	printf("*");
-	}
-	printf("\n");
-    }
-    return 0;
+	return 0;
 }
 
